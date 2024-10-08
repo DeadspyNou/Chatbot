@@ -119,7 +119,7 @@ def get_word_meaning(message):
 def get_weather_info(message):
     try:
         city_name = re.findall(r'weather in (.+)', message)[0]
-        api_key = "your_api_key_here"
+        api_key = "fb493613c92d2e9630de2f12b7f8c76b"
         url = f"http://api.openweathermap.org/data/2.5/weather?q={city_name}&appid={api_key}"
         response = requests.get(url).json()
         if response.get("cod") != "404":
